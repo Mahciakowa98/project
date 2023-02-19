@@ -1,32 +1,32 @@
 # project
-# Ecommerce - aplikacja (Python - Django, JavaScript, HTML, CSS)
+# Ecommerce - web application (Python - Django, JavaScript, HTML, CSS)
 
-Aplikacja internetowa stworzona za pomocą frameworku Django.
+A web application created using the Django framework.
 
 ## Instalacja
 
-Aby zacząć pracę z projektem należy zainstalować framework [django](https://docs.djangoproject.com/en/4.1/topics/install/):
+To start working with the project you need to install the framework [django](https://docs.djangoproject.com/en/4.1/topics/install/):
 
 ```bash
 python -m pip install Django
 ```
-Następnie należy wgrać plik requirements.txt
+Next - upload the file requirements.txt:
 
 ```bash
 pip install -r requirements.txt
 ```
-Sklonować projekt na swój komputer:
+Clone project to your computer:
 
 ```bash
 git clone https://github.com/Mahciakowa98/project.git
 ```
-Dokonać migracji projektu:
+Migrate project:
 
 ```bash
 python manage.py migrate
 ```
 
-Po udanej migracji można uruchomić projekt na swoim lockalhost:
+After successful migration you can run the project on your lockalhost:
 ```bash
 python manage.py runserver
 ```
