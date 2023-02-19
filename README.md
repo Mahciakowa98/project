@@ -10,15 +10,16 @@ To start working with the project you need to install the framework [Django](htt
 ```bash
 python -m pip install Django
 ```
-Next - upload the file requirements.txt:
 
-```bash
-pip install -r requirements.txt
-```
 Clone project to your computer:
 
 ```bash
 git clone https://github.com/Mahciakowa98/project.git
+```
+Next - upload the file requirements.txt:
+
+```bash
+pip install -r requirements.txt
 ```
 Migrate project:
 
