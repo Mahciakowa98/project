@@ -5,7 +5,7 @@ A web application created using the Django framework.
 
 ## Instalacja
 
-To start working with the project you need to install the framework [django](https://docs.djangoproject.com/en/4.1/topics/install/):
+To start working with the project you need to install the framework [Django](https://docs.djangoproject.com/en/4.1/):
 
 ```bash
 python -m pip install Django
