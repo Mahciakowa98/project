@@ -3,7 +3,7 @@
 
 A web application created using the Django framework.
 
-## Instalacja
+## Installation
 
 To start working with the project you need to install the framework [Django](https://docs.djangoproject.com/en/4.1/):
 
