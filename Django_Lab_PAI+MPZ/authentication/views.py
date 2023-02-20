@@ -44,3 +44,12 @@ def log_in(request):
     else:    
         context = {'form': LoginForm()}
         return render(request, 'authentication/login.html', context)
+
+#Zadanie 1
+def log_out(request):
+    if not request.user.is_authenticated:
+        return redirect('/login/')
+
+    if request.user.is_authenticated and request.method == 'GET':
+        logout(request)
+        return redirect('/login/')

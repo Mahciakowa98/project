@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51609e2b-6fc7-49dd-9190-743693b0145b" name="Changes" comment="" />
+    <list default="true" id="fe3515bd-2d3c-4c9f-855f-494b21b27f25" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectId" id="2M0NWhltfzQQ06pXz46WZ8GlWxp" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Ls7EEGyIuvMXr0838ZMVCuGP9p" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -19,17 +22,17 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/abebe/Desktop/Studia/PAI/ABebel/Django - Uwierzytelnianie"
+    "last_opened_file_path": "C:/Users/abebe/Desktop/Studia/MPZ"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="51609e2b-6fc7-49dd-9190-743693b0145b" name="Changes" comment="" />
-      <created>1676900572583</created>
+      <changelist id="fe3515bd-2d3c-4c9f-855f-494b21b27f25" name="Changes" comment="" />
+      <created>1676647822368</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1676900572583</updated>
+      <updated>1676647822368</updated>
     </task>
     <servers />
   </component>
