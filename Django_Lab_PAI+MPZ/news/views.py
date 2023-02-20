@@ -1,9 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
+from django.views.generic import UpdateView
+
 from .models import News
 from .forms import NewsForm
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
+
+
 # Create your views here.
 
 def index(request):
@@ -12,24 +16,25 @@ def index(request):
     # Stworzenie słownika przechowującego elementy bazy danych pod zmienną news
     context = {'news': news}
     # Przesłanie wyrenderowanej strony wraz z dodanymi elementami z bazy danych
-    # elementy ze słownika context wykorzytywane są w pliku news/index.html 
+    # elementy ze słownika context wykorzytywane są w pliku news/index.html
     return render(request, 'news/index.html', context)
+
 
 @login_required(login_url='/login/')
 def add(request):
     # Sprawdzenie metody jaką przyszło zapytanie HTTP
     # Jeżeli POST - szukamy danych w ciele zapytania
-    # Jeżeli GET - wysyłałym formularz do wypełnienia 
-    # (można przesyłać dane w zapytaniu GET - 
+    # Jeżeli GET - wysyłałym formularz do wypełnienia
+    # (można przesyłać dane w zapytaniu GET -
     # ale w tym rozwiązaniu tego nie wykorzystujemy)
     if request.method == 'POST':
-        
+
         # Formularze w Django umożliwiają sprawdzenie poprawności danych
         # więc tworzymy obiekt formularza z zapytania
         news = NewsForm(request.POST)
 
-        # Jeżeli formularz - czyli dane przesłane z zapytania POST 
-        # są proawidłowe dodajemy element do bazy danych 
+        # Jeżeli formularz - czyli dane przesłane z zapytania POST
+        # są prawidłowe dodajemy element do bazy danych
         if news.is_valid():
             news = news.save(commit=False)
             # news.author = request.user
@@ -37,13 +42,13 @@ def add(request):
             news.last_edit_time = timezone.now()
             news.save()
             return redirect('view_news')
-        # Jeżeli nie są prawidłowe przesyłamy formularz z powrotem do kilenta 
+        # Jeżeli nie są prawidłowe przesyłamy formularz z powrotem do kilenta
         # Autmatyczny walidator tworzy również pola błędów, które są dostępne po
         # stronie klienta
         else:
             context = {'form': news}
             return render(request, 'news/add.html', context)
-    
+
     # Jeżeli zapytanie typu GET przesyłamy pusty formularz
     else:
         news = NewsForm()
@@ -52,9 +57,28 @@ def add(request):
 
 
 def get(request, id):
-    # funkcja get_object_or_404 zwraca element z bazy 
+    # funkcja get_object_or_404 zwraca element z bazy
     # danych o danej wartości argumentu
     # lub przesłyła do kilenta błąd
     news = get_object_or_404(News, id=id)
     context = {'news': news}
     return render(request, 'news/view.html', context)
+
+
+#zadanie 2
+def update(request, id):
+    data = get_object_or_404(News, id=id)
+    news = NewsForm(instance=data)
+
+    if not request.user.is_authenticated:
+        return redirect('/login/')
+
+    if request.method == "POST":
+        news = NewsForm(request.POST, instance=data)
+        if news.is_valid():
+            news = news.save(commit=False)
+            news.last_edit_time = timezone.now()
+            news.save()
+            return redirect('view_news')
+    context = {"form": news}
+    return render(request, 'news/add.html', context)

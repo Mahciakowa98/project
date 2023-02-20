@@ -1,5 +1,8 @@
+{% include "news/update.html" %}
+{% block content %}
 {{ news.topic }}
 {{ news.author }}
 {{ news.text }}
 {{ news.create_time }}
 {{ news.last_edit_time }}
+{% endblock %}
