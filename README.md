@@ -3,6 +3,34 @@
 
 A web application created using the Django framework.
 
+## Technologies used
+
+- Python
+- Django
+- JavaScript
+
+## Python modules
+
+- asgiref
+- boto3
+- botocore
+- Django
+- django-allow-cidr
+- django-crispy-forms
+- django-mathfilters
+- django-utils-six
+- gunicorn
+- jmespath
+- packaging
+- Pillow
+- pyparsing
+- python-dateutil
+- s3transfer
+- six
+- sqlparse
+- tzdata
+- urllib3
+
 ## Installation
 
 To start working with the project you need to install the framework [Django](https://docs.djangoproject.com/en/4.1/):
