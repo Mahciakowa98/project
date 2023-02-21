@@ -1,7 +1,7 @@
 # project
 # Ecommerce - web application (Python - Django, JavaScript, HTML, CSS)
 
-A web application created using the Django framework.
+A web application created using the Django framework - shirt online store
 
 ## Technologies used
 
