@@ -16,6 +16,14 @@ Clone project to your computer:
 ```bash
 git clone https://github.com/Mahciakowa98/project.git
 ```
+
+Make sure you have installed virtualenv and you have created your virtual environment:
+
+```bash
+pip install virtualenv
+```
+
+
 Next - upload the file requirements.txt:
 
 ```bash
